@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Reactive.Linq;
-using PropertyChanged;
 using Reactive.Bindings;
 using RxWeatherSample.Services;
 
 namespace RxWeatherSample.ViewModels
 {
-    [ImplementPropertyChanged]
     public class MainViewModel
     {
         private readonly OpenWeatherService _service = new OpenWeatherService();
