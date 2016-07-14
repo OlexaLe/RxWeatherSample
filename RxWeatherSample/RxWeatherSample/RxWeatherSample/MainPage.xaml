@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage x:Class="RxWeatherSample.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:RxWeatherSample"
-             x:Class="RxWeatherSample.MainPage">
-
-  <Label Text="Welcome to Xamarin Forms!"
-           VerticalOptions="Center"
-           HorizontalOptions="Center" />
-
+             xmlns:local="clr-namespace:RxWeatherSample">
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Entry Placeholder="city" Text="{Binding City.Value}" />
+        <Label FontSize="Large"
+               HorizontalTextAlignment="Center"
+               Text="{Binding Temperature.Value}" />
+    </StackLayout>
 </ContentPage>

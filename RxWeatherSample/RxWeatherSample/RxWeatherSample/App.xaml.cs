@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-using Xamarin.Forms;
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
 namespace RxWeatherSample
 {
@@ -16,9 +14,9 @@ namespace RxWeatherSample
             MainPage = new RxWeatherSample.MainPage();
         }
 
-        protected override void OnStart()
+        protected override void OnResume()
         {
-            // Handle when your app starts
+            // Handle when your app resumes
         }
 
         protected override void OnSleep()
@@ -26,9 +24,9 @@ namespace RxWeatherSample
             // Handle when your app sleeps
         }
 
-        protected override void OnResume()
+        protected override void OnStart()
         {
-            // Handle when your app resumes
+            // Handle when your app starts
         }
     }
 }
